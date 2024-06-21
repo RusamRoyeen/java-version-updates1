@@ -19,7 +19,24 @@ public class Main {
         printDoubled(items);
 
 
+        System.out.println("**************************************");
+
+        FootballPlayer joe = new FootballPlayer("joe");
+        BaseballPlayer pat = new BaseballPlayer("pat");
+        SoccerPlayer beckham = new SoccerPlayer("Beckham");
+
+        Team liverpool = new Team("Liverpool");
+        liverpool.addPlayer(joe);
+        liverpool.addPlayer(pat);
+        liverpool.addPlayer(beckham);
+
+
+
+
+
     }
+
+
 
     private static void printDoubled(ArrayList<Integer> items) {
         for (Integer i : items){
