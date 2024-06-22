@@ -6,6 +6,8 @@ public class Main {
 
     public static void main(String[] args) {
 
+        Apple a = new Apple(5);
+
         System.out.println("How to access a constant");
 
         Currency c = Currency.DIME;
@@ -35,6 +37,13 @@ public class Main {
                 System.out.println("It is 25 cent");
                 break;
         }
+
+        System.out.println("Operation Task");
+        calculate(3,5, PLUS);
+
+        System.out.println("How to retrieve the constant value");
+        System.out.println(Currency.PENNY.getValue());
+        System.out.println(Currency.QUARTER.getValue());
     }
 
     private static void calculate(double x, double y, Operation operation) {
@@ -52,6 +61,8 @@ public class Main {
                 System.out.println(x / y);
                 break;
         }
+
+
     }
 
 }
