@@ -11,6 +11,7 @@
   <url>http://maven.apache.org</url>
   <modules>
     <module>m1-generics</module>
+      <module>m2-enum</module>
   </modules>
 
   <properties>
