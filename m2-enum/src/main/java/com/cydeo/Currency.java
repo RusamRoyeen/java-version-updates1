@@ -6,9 +6,13 @@ public enum Currency {
 
 
 
-    int value;
+    private int value;
 
     Currency(int value) {
         this.value = value;
+    }
+
+    public int getValue() {
+        return value;
     }
 }
