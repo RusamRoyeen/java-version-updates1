@@ -25,10 +25,15 @@ public class Main {
         BaseballPlayer pat = new BaseballPlayer("pat");
         SoccerPlayer beckham = new SoccerPlayer("Beckham");
 
-        Team liverpool = new Team("Liverpool");
-        liverpool.addPlayer(joe);
-        liverpool.addPlayer(pat);
+        Team<SoccerPlayer> liverpool = new Team("Liverpool");
+//        liverpool.addPlayer(joe);
+//        liverpool.addPlayer(pat);
         liverpool.addPlayer(beckham);
+
+//        Team<String> brokenTeam = new Team<>("what kind of team is this?");
+
+//        Team<Integer> t2 = new Team<>("Very weird");
+
 
 
 
