@@ -2,6 +2,7 @@ package com.cydeo;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Consumer;
 
 public class AppleTest {
 
@@ -12,6 +13,8 @@ public class AppleTest {
         inventory.add(new Apple(100, Color.RED));
         inventory.add(new Apple(200, Color.GREEN));
         inventory.add(new Apple(50, Color.RED));
+
+        inventory.forEach( apple -> System.out.println(apple));
 
         AppleHeavyPredicate abc = new AppleHeavyPredicate();
         List<Apple> heavyApple = filterApples(inventory, abc);
