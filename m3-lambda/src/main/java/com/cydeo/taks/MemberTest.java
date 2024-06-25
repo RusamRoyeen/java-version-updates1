@@ -1,5 +1,8 @@
 package com.cydeo.taks;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class MemberTest {
 
     public static void main(String[] args) {
@@ -9,5 +12,18 @@ public class MemberTest {
         Person p3 = new Person("tom", 15, Gender.MALE);
         Person p4 = new Person("alley", 45, Gender.FEMALE);
 
+
+
+    }
+
+    private static void print (List<Person> personList, CheckMember checkMember){
+
+        List<Person> result = new ArrayList<>();
+        for (Person person : personList) {
+            if (checkMember.test(person)){
+                result.add(person);
+            }
+        }
+        System.out.println(result);
     }
 }
