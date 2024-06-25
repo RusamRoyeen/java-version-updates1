@@ -36,6 +36,10 @@ public class FunctionalInterfaces {
         BiFunction<Integer, Integer, Integer> func = (x, y) -> x+y;
         System.out.println(func.apply(10,20));
 
+        System.out.println("******************* SUPPLIER ******************************");
+        Supplier<Double> randomValue = () -> Math.random();
+        System.out.println(randomValue.get());
+
 
 
 
