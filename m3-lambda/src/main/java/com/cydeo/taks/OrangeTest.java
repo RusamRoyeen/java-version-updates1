@@ -1,4 +1,6 @@
-package com.cydeo;
+package com.cydeo.taks;
+
+import com.cydeo.Color;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,9 +18,11 @@ public class OrangeTest {
         prettyPrintOrange(inventory, orangeLambda);
         prettyPrintOrange(inventory,orange -> "An orange of " + orange.getWeight() + "g " );
 
+        System.out.println("****************************************************");
+
         OrangeFormatter fancyFormatter = orange -> {
             String ch = orange.getWeight() > 200 ? "Heavy" : "Light";
-            return "A" + ch + " " + orange.getColor() + " orange";
+            return "A " + ch + " " + orange.getColor() + " orange";
         };
         prettyPrintOrange(inventory, fancyFormatter);
     }
