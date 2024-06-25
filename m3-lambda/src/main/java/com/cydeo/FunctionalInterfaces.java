@@ -2,6 +2,7 @@ package com.cydeo;
 
 import java.util.function.BiConsumer;
 import java.util.function.Consumer;
+import java.util.function.Function;
 import java.util.function.Predicate;
 
 public class FunctionalInterfaces {
@@ -22,13 +23,18 @@ public class FunctionalInterfaces {
 
         System.out.println("******************* CONSUMER *************************");
 
-        Consumer<Integer> display = i -> System.out.println();
+        Consumer<Integer> display = i -> System.out.println(i);
         display.accept(10);
 
         System.out.println("******************* BI CONSUMER *************************");
 
         BiConsumer<Integer, Integer> addTwo = (x, y) ->System.out.println(x+y);
         addTwo.accept(1,2);
+
+        System.out.println("******************* FUNCTION *************************");
+        Function<String, String> fun = s -> "Hello" + s;
+        System.out.println(fun.apply(" Cydeo"));
+
 
 
 
