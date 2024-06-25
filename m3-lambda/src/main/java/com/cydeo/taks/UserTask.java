@@ -13,10 +13,14 @@ public class UserTask {
         users.add(new User("Tom", "Evan", 25));
         users.add(new User("Emma", "Pollard", 55));
 
+
+
         //Print all elements in the list
+        printName(users, user -> true);
 
 
         //Print all people that last name starts with E
+        printName(users, user -> user.getLastName().startsWith("E"));
 
 
     }
