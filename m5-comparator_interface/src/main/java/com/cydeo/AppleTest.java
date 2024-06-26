@@ -1,6 +1,7 @@
 package com.cydeo;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 public class AppleTest {
@@ -12,6 +13,10 @@ public class AppleTest {
         inventory.add(new Apple(100, Color.RED));
         inventory.add(new Apple(200, Color.GREEN));
         inventory.add(new Apple(50, Color.RED));
+
+        Comparator<Apple> sortApple = Comparator.comparing(Apple::getWeight);
+        inventory.sort(sortApple);
+        System.out.println(inventory);
 
     }
 }
