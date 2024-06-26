@@ -11,8 +11,10 @@ public class Main {
         List<Integer> list = Arrays.asList(10, 0, 15, 5, 20);
         System.out.println(list);
 
+        //Ascending
         Collections.sort(list);
         System.out.println(list);
+
 
     }
 }
