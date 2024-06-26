@@ -1,6 +1,7 @@
 package com.cydeo;
 
 import java.util.function.BiFunction;
+import java.util.function.Consumer;
 import java.util.function.Predicate;
 
 public class Main {
@@ -22,6 +23,9 @@ public class Main {
 
         BiFunction<String, Integer, String> func = (str, i) -> str.substring(i);
         BiFunction<String, Integer, String> func2 = String ::substring;
+
+        Consumer<Integer> display = i -> System.out.println(i);
+        Consumer<Integer> display2 = System.out::println;
 
 
 
