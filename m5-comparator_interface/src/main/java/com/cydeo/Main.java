@@ -18,6 +18,13 @@ public class Main {
         System.out.println(list);
         Collections.sort(list,((o1, o2) -> (o1 > o2) ? -1 : (o1<o2) ? 1 : 0 ));
 
+        //Ascending
+        list.sort((o1, o2) -> o1.compareTo(o2));
+
+        //Descending
+        list.sort((o2, o1) -> o1.compareTo(o2));
+        System.out.println(list);
+
 
 
     }
