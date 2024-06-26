@@ -22,6 +22,10 @@ public class CarTest {
 
         //Two Argument Constructor
         BiFunction<String, Integer, Car> a1 = Car::new;
+        Car honda = a1.apply("Honda", 2015);
+        System.out.println(honda.getMake() + " " + honda.getModel());
+
+
 
 
     }
