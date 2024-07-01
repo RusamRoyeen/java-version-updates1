@@ -1,6 +1,7 @@
 package com.cydeo.task;
 
 import java.util.Comparator;
+import java.util.stream.Stream;
 
 import static java.util.Comparator.comparing;
 
@@ -40,6 +41,9 @@ public class DishTask {
                 .sorted(comparing(Dish::getCalories).reversed())
                 .map(Dish::getName)
                 .forEach(System.out::println);
+
+
+
 
 
     }
