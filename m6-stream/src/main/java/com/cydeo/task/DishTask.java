@@ -43,8 +43,5 @@ public class DishTask {
                 .forEach(System.out::println);
 
 
-
-
-
     }
 }
