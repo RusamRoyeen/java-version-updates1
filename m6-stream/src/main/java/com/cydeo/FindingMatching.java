@@ -3,6 +3,8 @@ package com.cydeo;
 import com.cydeo.task.Dish;
 import com.cydeo.task.DishData;
 
+import java.util.Optional;
+
 public class FindingMatching {
 
 
@@ -19,8 +21,14 @@ public class FindingMatching {
 
         System.out.println("NONE MATCH");
         boolean isHealthy2 = DishData.getAll().stream().noneMatch(dish -> dish.getCalories() >= 1000);
+        System.out.println(isHealthy2);
 
+        System.out.println("FIND ANY");
+
+        Optional<Dish> dish = DishData.getAll().stream().filter(Dish::isVegetarian).findAny();
+        System.out.println(dish.get());
     }
+
 
 
 
