@@ -1,7 +1,11 @@
 package com.cydeo;
 
+import com.cydeo.task.Dish;
+import com.cydeo.task.DishData;
+
 import java.util.Arrays;
 import java.util.List;
+import java.util.Optional;
 
 public class Reducing {
 
@@ -16,7 +20,32 @@ public class Reducing {
         }
 
         int result = numbers.stream().reduce(0,(a,b) -> a+b);
-        System.out.println(result);
+
+        Optional<Integer> result2 = numbers.stream().reduce((a, b) -> a+b);
+        System.out.println(result2.get());
+
+        System.out.println("Dish calories total: ");
+        Optional<Integer> calTotal = DishData.getAll().stream()
+                .map(Dish::getCalories)
+         //       .reduce((a,b) -> a+b);
+                 .reduce(Integer::sum);
+
+
+        System.out.println(calTotal.get());
+
+        System.out.println("Max and Min");
+        Optional<Integer> min = numbers.stream().reduce(Integer::min);
+        Optional<Integer> max = numbers.stream().reduce(Integer::max);
+        Optional<Integer> sum1 = numbers.stream().reduce(Integer::sum);
+
+        System.out.println("Min: " + min.get());
+        System.out.println("Max: " + max.get());
+        System.out.println("Sum1 = " + sum1.get());
+
+        System.out.println("COUNT");
+        long dishCount = DishData.getAll().stream().count();
+        System.out.println(dishCount);
 
     }
+
 }
