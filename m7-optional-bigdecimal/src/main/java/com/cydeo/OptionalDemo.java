@@ -13,7 +13,7 @@ public class OptionalDemo {
         //empty() - isPresent()
 
         Optional<String> empty = Optional.empty();
-        System.out.println(empty);
+ //       System.out.println(empty);
 //        System.out.println(empty.isPresent());
 //
 //
@@ -24,6 +24,17 @@ public class OptionalDemo {
   //      System.out.println(empty.get());
         //ifPresent
         Optional<Integer> bigNumber = number.stream().filter(x -> x>100).findAny();
+        bigNumber.ifPresent(System.out::println);
+
+        //get
+
+     //   System.out.println(bigNumber.get());
+
+        //orElse
+        System.out.println(bigNumber.orElse(5));
+
+
+
 
 
 
