@@ -63,10 +63,10 @@ public class SwitchCaseDemo {
         }
 
         int day1 = switch (month){
-            case 1, 3, 5, 7, 8, 10, 12 -> day;
-            case 4, 6, 9 -> day;
-            case 2 -> day;
-            default -> day;
+            case 1, 3, 5, 7, 8, 10, 12 -> 31;
+            case 4, 6, 9 -> 30;
+            case 2 -> 28;
+            default -> 0;
 
         };
 
@@ -74,8 +74,8 @@ public class SwitchCaseDemo {
         System.out.println("********************************************");
 
         int day2 = switch (month){
-            case 1, 3, 5, 7, 8, 10, 12 -> day;
-            case 4, 6, 9 -> day;
+            case 1, 3, 5, 7, 8, 10, 12 -> 31;
+            case 4, 6, 9 -> 30;
             case 2 -> {
                 Scanner scanner = new Scanner(System.in);
                 System.out.println("Enter year: ");
