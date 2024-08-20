@@ -36,7 +36,7 @@ public class OptionalDemo {
         System.out.println(bigNumber.orElse(5));
 
         FactoryMethodsDemo f1 = new FactoryMethodsDemo();
-        Apple a1 = new Apple();
+
 
 
 
