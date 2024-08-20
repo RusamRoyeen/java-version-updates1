@@ -1,6 +1,5 @@
 package com.cydeo;
 
-import com.cydeo.java10.Apple;
 import com.cydeo.java9.FactoryMethodsDemo;
 
 import java.util.Arrays;
