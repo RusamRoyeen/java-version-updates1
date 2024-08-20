@@ -8,6 +8,9 @@ public class LocalVariableTypeDemo {
     public static void main(String[] args) {
 
        //Type Inference
+
+        String s;
+        s = "Ozzy";
         var str = "Cydeo";
         var number = 5;
 
